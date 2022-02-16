@@ -1,3 +1,4 @@
+const request = require("request");
 /**
  * Makes a single API request to retrieve the user's IP address.
  * Input:
@@ -6,7 +7,6 @@
  *   - An error, if any (nullable)
  *   - The IP address as a string (null if error). Example: "162.245.144.188"
  */
-const request = require("request");
 const fetchMyIP = (callback) => {
   request("https://api.ipify.org?format=json", (error, resp, body) => {
     if (error) {
